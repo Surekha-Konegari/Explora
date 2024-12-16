@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+    <link rel="stylesheet" href="stylep.css">
+</head>
+<body>
+    <div class="div">
+        <h1>INDIA</h1>
+        <div class="rotate_outer">
+            <img src="tajmahal1.jpeg" class="rotator" alt="Taj Mahal">
+            <img src="ladakh11.png" class="rotator" alt="Ladakh">
+            <img src="kerala11.jpg" class="rotator" alt="Kerala Boat">
+            <img src="amaravati11.webp" class="rotator" alt="Amaravati">
+            <img src="charminar11.jpg" class="rotator" alt="Charminar">
+            <img src="golden11.webp" class="rotator" alt="Golden Temple">
+            <img src="mysuru11.jpg" class="rotator" alt="Mysuru">
+            <img src="jaipur11.webp" class="rotator" alt="Jaipur">
+            <img src="redfort11.webp" class="rotator" alt="Red Fort">
+            <img src="manali11.jpg" class="rotator" alt="Manali">
+            <div id="text_overlay"></div>
+        </div>
+        <span id="place">PLACES IN INDIA</span>
+        <div class="dir">
+            <img src="North.jpeg" alt="" id="img">
+            <img src="South.jpeg" alt="" id="img">
+            <img src="East.jpeg" alt="" id="img">
+            <img src="West.jpeg" alt="" id="img">
+        </div>
+        <div class="dir">
+            <a href="../north.html"><button id="button">NORTH</button></a>
+            <a href="../south.html"><button id="button">SOUTH</button></a>
+            <a href="../east.html"><button id="button">EAST</button></a>
+            <a href="../west.html"><button id="button">WEST</button></a>
+        </div>
+        <div id="quote">--TRAVEL IS A JOURNEY INTO YOURSELF--</div>
+    </div>
+    <script>
+        const images = document.querySelectorAll(".rotator");
+        const textOverlay = document.getElementById("text_overlay");
+        const texts = [
+            "TAJ MAHAL",
+            "LADAKH",
+            "KERALA",
+            "AMARAVATI",
+            "CHARMINAR",
+            "GOLDEN TEMPLE",
+            "MYSURU",
+            "JAIPUR",
+            "RED FORT",
+            "MANALI"
+        ];
+        let currentIndex = 0;
+            function rotateImages() {
+            images[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add("active");
+            textOverlay.textContent = texts[currentIndex];
+        }
+        images[currentIndex].classList.add("active");
+        textOverlay.textContent = texts[currentIndex];
+        setInterval(rotateImages, 3000);
+    </script>
+</body>
+</html>

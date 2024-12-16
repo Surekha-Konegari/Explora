@@ -1,0 +1,105 @@
+body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: url(../bagtrans.png);
+}
+.div{
+    background-color: rgba(225, 241, 241, 0.589);
+    margin:30px;
+    width:1100px;
+    height:1350px;
+    border-radius: 12px;
+    border: 5px solid lightblue;
+}
+.div h1 {
+    background-color: #2f8d46;
+    background-image: url("../leaf.jpg");
+    position:relative;
+    top:25px;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 1px;
+      font-size: 100px;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Steelfish Rg', 'helvetica neue', 
+                      helvetica, arial, sans-serif;
+      font-weight: 800;
+      -webkit-font-smoothing: antialiased;
+}
+.div > #d{
+    background-color: rgb(231, 247, 217);
+}
+#place{
+    position: relative; 
+    top: 70px; 
+    left:30%;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(118, 189, 255);
+    padding: 15px 30px;
+    background-color: rgba(167, 243, 230, 0.384);
+    border-radius: 30px;
+}
+.dir{
+    position: relative; 
+    justify-content: space-between;
+    top: 150px; 
+    display: flex;
+}
+#img{
+    border:2px solid gray;
+    border-radius: 10px;
+}
+#button{
+    background-color: rgba(229, 192, 147, 0.808);
+    position:relative;
+    top: 10px;
+    padding: 6px 40px;
+    border-radius: 30px;
+}
+.rotate_outer {
+    position: relative;
+    width: 1100px;
+    height: 550px;
+    overflow: hidden;
+}
+.rotator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.rotator.active {
+    opacity: 1;
+}
+#text_overlay {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+#quote{
+    position: relative;
+    top:200px;
+    left:19%;
+    font-size: xx-large;
+    color: rgb(110, 75, 29);
+    font-family: cursive;
+    padding:15px;
+}
